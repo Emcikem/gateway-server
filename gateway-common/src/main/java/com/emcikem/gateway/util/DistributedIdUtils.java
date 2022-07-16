@@ -5,5 +5,5 @@ package com.emcikem.gateway.util;
  * @create 2022/7/16
  * @desc
  */
-public class RedisUtil {
+public class DistributedIdUtils {
 }

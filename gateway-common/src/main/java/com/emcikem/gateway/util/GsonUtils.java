@@ -17,7 +17,7 @@ import java.util.Map;
  * @author Emcikem
  * @create 2022/7/16
  */
-public class GsonUtil {
+public class GsonUtils {
 
     private final static Gson GSON = (new GsonBuilder()).registerTypeAdapter(Date.class, new DateTypeAdapter()).create();
 
