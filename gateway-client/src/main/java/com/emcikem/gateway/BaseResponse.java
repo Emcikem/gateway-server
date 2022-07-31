@@ -1,4 +1,4 @@
-package com.emcikem.gateway.response;
+package com.emcikem.gateway;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -9,8 +9,6 @@ import java.io.Serializable;
  * @author Emcikem
  * @create 2022/7/16
  */
-@NoArgsConstructor
-@AllArgsConstructor
 public class BaseResponse implements Serializable {
 
     private int code;
@@ -31,5 +29,17 @@ public class BaseResponse implements Serializable {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseResponse{" +
+                "code=" + code +
+                ", message='" + message + '\'' +
+                '}';
+    }
+
+    public boolean isSuccess() {
+        return this.code == 0;
     }
 }
